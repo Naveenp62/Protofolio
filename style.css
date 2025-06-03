@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Website background color */
+body {
+    background: #1f242d;
+}
+
+/* Navbar  */
+/* Navbar text color */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navbar height, width, background */
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+/*   background: slateblue;    */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Navbar "Portfolio" name logo */
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Navbar details un-ordered list */
+.navbar ul {
+    display: flex;
+}
+
+/* Navbar details un-ordered list */
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+/* Navbar details un-ordered list */
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+/*Navbar text highlight on placing cursor and 'active' is for highlight current page text with color */
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    color: #7cf03d;
+}
+/* Navbar  */
+
+/* Home section  */
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0; 
+    color: #fff;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 40px;
+    /* Newly added 
+    justify-content: space-between;
+    min-height: 90vh;
+    padding: 40px 9% 20px;
+    flex-wrap: wrap;  */
+}
+
+.home-info {
+    flex: 1 1 50%;
+    color: #fff;
+}
+
+.img-box {
+    width: 300px;
+    height: 300px;
+    background: #7cf03d;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Needed for ::before/::after */
+}
+
+.img-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: static; /* Changed from absolute */
+}
+
+/* Home section h1 tag */
+.home-info h1{
+    font-size: 55px;
+}
+
+/* Home section  h2 tag*/
+.home-info h2{
+    font-size: 32px;
+    color: aqua;
+    margin-top: -10px;
+}
+
+/* Home section p tag */
+.home-info p{
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+/* Home section links(linkedin, github, mail, phone)*/
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+/* Home section  'Download' button styling*/
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #7cf03d;
+    border: 2px solid #7cf03d;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #7cf03d;
+    font-size: 16px;
+    color: #1f242d;
+    font-weight: 600;
+}
+
+/* Home section  'Download' button styling on placing cursor*/
+.btn:hover {
+    background: transparent;
+    color: #7cf03d;
+    box-shadow: none;
+}
+
+/*Home section links */
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+}
+
+/*Home section links */
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #7cf03d;
+    border-radius: 50%;
+    font-size: 2opx;
+    color: #7cf03d;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+/*Home section links */
+.home-info .btn-sci .sci a:hover {
+    background: #7cf03d;
+    color: #1f242d;
+    box-shadow: 0 0 10px;
+}
+
+/* Home section image background */
+.home-img .img-box {
+    width: 32vw;
+    height: 32vw;
+    background: red;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Home section image background */
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    /*background: conic-gradient(transparent, transparent, transparent, #7cf03d); */
+}
+
+/* Home section image background */
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: slateblue;
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+/* Home section image settings */
+.home-img .img-box .img-item img {
+    position: absolute;
+    /*top: 10px; */
+    display: block;
+    width: 80%;
+    object-fit: cover;
+}
+
+/* END OF MY CODE */
+/* About Section begin*/
+.about {
+    background: #282c34;
+    color: #fff;
+    padding: 60px 9%;
+    min-height: 80vh;
+   /* padding: 80px 9%;
+    min-height: 100vh;  */
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #7cf03d;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+/* About Section end*/
+
+/* Skills Section begin*/
+.skills {
+    background: #282c34;
+    color: #fff;
+    padding: 60px 9%;
+    min-height: 70vh;
+   /* padding: 100px 15%;
+    min-height: 100vh; */
+    
+}
+
+.skills h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #7cf03d;
+}
+
+
+/* Skills un-ordered list */
+.skills ul li {
+    list-style: none;
+    margin-left: 35px;
+    
+}
+
+/* Skills un-ordered list */
+.skills ul li {
+    font-size: 22px;
+    padding: 25px 9%;
+    justify-content: space-between;
+    line-height: 1.8;
+    font-weight: 500;
+    transition: .5s;
+}
+
+/*Navbar text highlight on placing cursor and 'active' is for highlight current page text with color */
+.skills ul li:hover,
+.skills ul li.active  {
+    color: #7cf03d;
+}
+/* Skills Section end*/
+
+/* Education section begin */
+.education {
+    background: #282c34;
+    color: #fff;
+    padding: 60px 9%;
+    min-height: 70vh;
+   /* padding: 100px 15%;
+    min-height: 100vh; */
+    
+}
+
+.education-college {
+    margin-left: 60px;
+}
+
+/*Navbar text highlight on placing cursor and 'active' is for highlight current page text with color */
+.education-college h3:hover,
+.education-college h3.active  {
+    color: #7cf03d;
+}
+
+.education h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #7cf03d;
+}
+
+
+/* Education un-ordered list */
+.education ul {
+    padding-left: 0;
+}
+
+.education ul li {
+    list-style: none;
+    margin-left: 35px;
+    
+}  
+
+/* Education un-ordered list */
+.education ul li {
+    font-size: 22px;
+    /*padding: 25px 9%;
+    justify-content: space-between;  */
+    margin: 15px 0;
+    line-height: 1.8;
+    font-weight: 500;
+    transition: .5s;
+}
+
+/*Navbar text highlight on placing cursor and 'active' is for highlight current page text with color */
+.education ul li:hover,
+.education ul li.active  {
+    color: #7cf03d;
+}
+
+/* Education section end */
+
+/*Projects Section begin */
+.projects {
+    background: #282c34;
+    color: #fff;
+    padding: 60px 9%;
+    min-height: 70vh;
+   /* padding: 100px 15%;
+    min-height: 100vh; */
+    
+}
+
+.projects-details {
+    margin-left: 60px;
+}
+
+/*Navbar text highlight on placing cursor and 'active' is for highlight current page text with color */
+.projects-details h4:hover,
+.projects-details h4.active  {
+    color: #7cf03d;
+}
+
+.projects h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #7cf03d;
+}
+
+
+.projects h4.desc {
+    margin-left: 60px;
+    margin-right: 80px;
+}
+
+.projects h4.tech {
+    margin-left: 60px;
+    margin-right: 80px;
+    font-size: 20px;
+}
+
+
+/* Project un-ordered list */
+.projects ul {
+    padding-left: 0;
+}
+
+.projects ul li {
+    list-style: none;
+    margin-left: 35px;
+    
+}  
+
+/* Project un-ordered list */
+.projects ul li {
+    font-size: 22px;
+    /*padding: 25px 9%;
+    justify-content: space-between;  */
+    margin: 15px 0;
+    line-height: 1.8;
+    font-weight: 500;
+    transition: .5s;
+}
+
+/*Navbar text highlight on placing cursor and 'active' is for highlight current page text with color */
+.projects ul li:hover,
+.projects ul li.active  {
+    color: #7cf03d;
+}
+
+.projects-details a.gitlink {
+    font-size: 20px;
+
+}
+
+/* Projects Section end */
+
+/* Contact Section begin*/
+.contact {
+    background: #282c34;
+    color: #fff;
+    padding: 60px 9%;
+    min-height: 70vh;
+   /* padding: 100px 15%;
+    min-height: 100vh; */
+    
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #7cf03d;
+}
+
+
+/* Contact un-ordered list */
+.contact ul li {
+    list-style: none;
+    margin-left: 35px;
+    
+}
+
+/* Contact un-ordered list */
+.contact ul li {
+    font-size: 22px;
+    padding: 25px 9%;
+    justify-content: space-between;
+    line-height: 1.8;
+    font-weight: 500;
+    transition: .5s;
+}
+
+/*Navbar text highlight on placing cursor and 'active' is for highlight current page text with color */
+.contact ul li:hover,
+.contact ul li.active  {
+    color: #7cf03d;
+}
+/* Contact Section end*/
+
+.footer {
+      background: #1f242d;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-info,
+    .home-img {
+        flex: 1 1 100%;
+    }
+}
